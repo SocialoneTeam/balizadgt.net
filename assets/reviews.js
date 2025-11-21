@@ -1,103 +1,203 @@
 const mockReviews = [
   {
     id: 1,
-    customer_name: 'María González',
+    customer_name: 'María G.',
     rating: 5,
-    title: 'Excelente producto, muy recomendable',
-    comment: 'La baliza es de muy buena calidad. Fácil de usar y cumple perfectamente con la normativa DGT. La luz es muy potente y visible incluso en condiciones de poca visibilidad.',
-    helpful_count: 42,
+    title: 'Muy buena compra, super visible',
+    comment: 'La compré porque se hace obligatoria el año que viene y la verdad que estoy muy contenta. La luz es super potente, la he probado de día y se ve perfectamente. El imán se pega muy bien al techo del coche. Viene en una caja pequeña que cabe perfecta en la guantera.',
+    helpful_count: 156,
     verified_purchase: true,
-    created_at: new Date('2024-11-15')
+    created_at: new Date('2024-11-18')
   },
   {
     id: 2,
-    customer_name: 'Carlos Rodríguez',
+    customer_name: 'Carlos R.',
     rating: 5,
-    title: 'Obligatoria y de calidad',
-    comment: 'Con la nueva normativa era necesario comprarla. Esta baliza V-16 es perfecta, muy fácil de colocar en el techo del coche y se ve a gran distancia. Muy contento con la compra.',
-    helpful_count: 38,
+    title: 'Obligatoria y cumple perfectamente',
+    comment: 'Con el tema de que será obligatoria desde enero decidí comprarla ya. Tiene el certificado IDIADA que es el que pide la DGT, así que sin problemas. La he usado una vez en una avería y se veía desde muy lejos. Muy recomendable.',
+    helpful_count: 143,
+    verified_purchase: true,
+    created_at: new Date('2024-11-16')
+  },
+  {
+    id: 3,
+    customer_name: 'Ana M.',
+    rating: 5,
+    title: 'Imprescindible llevarla',
+    comment: 'Me ha parecido muy buena. Compacta, ligera y potente. He comprado 3, una para cada coche familiar. La batería dura horas según pone en las instrucciones. El precio me parece correcto para un producto homologado.',
+    helpful_count: 134,
+    verified_purchase: true,
+    created_at: new Date('2024-11-14')
+  },
+  {
+    id: 4,
+    customer_name: 'Javier L.',
+    rating: 4,
+    title: 'Buena pero un poco cara',
+    comment: 'El producto está muy bien, cumple con la normativa y funciona perfectamente. Le quito una estrella porque me parece un poco cara para lo que es, aunque entiendo que al ser obligatoria y estar homologada tiene ese precio. Aún así la recomiendo.',
+    helpful_count: 89,
     verified_purchase: true,
     created_at: new Date('2024-11-12')
   },
   {
-    id: 3,
-    customer_name: 'Ana Martínez',
+    id: 5,
+    customer_name: 'Laura S.',
     rating: 5,
-    title: 'Imprescindible para cumplir la ley',
-    comment: 'Compré dos unidades para mis dos coches. La baliza es muy resistente, la batería dura mucho y el imán es muy potente. Además, tiene certificado IDIADA que es lo que exige la DGT.',
-    helpful_count: 35,
+    title: 'Súper visible, muy contenta',
+    comment: 'Llegó en 2 días, perfectamente embalada. La luz es muy potente, más de lo que esperaba. Se activa sola al colocarla en el techo gracias al imán. Muy fácil de usar. Sin duda vale la pena.',
+    helpful_count: 167,
     verified_purchase: true,
     created_at: new Date('2024-11-10')
   },
   {
-    id: 4,
-    customer_name: 'Javier López',
-    rating: 4,
-    title: 'Buena compra',
-    comment: 'Producto de calidad, cumple con lo esperado. La única pega es que el precio podría ser un poco más ajustado, pero entiendo que es un producto homologado y de seguridad.',
-    helpful_count: 28,
+    id: 6,
+    customer_name: 'Miguel F.',
+    rating: 5,
+    title: 'Perfecta para la normativa nueva',
+    comment: 'Con la ley que entra en 2026 hay que llevar estas balizas sí o sí. Esta tiene todos los papeles en regla, certificado IDIADA y todo. La he probado y funciona genial. Cabe en cualquier sitio del coche.',
+    helpful_count: 128,
     verified_purchase: true,
     created_at: new Date('2024-11-08')
   },
   {
-    id: 5,
-    customer_name: 'Laura Sánchez',
-    rating: 5,
-    title: 'Muy visible y fácil de usar',
-    comment: 'La luz naranja es muy potente y se ve perfectamente de día y de noche. El imán se adhiere muy bien al techo del coche. Llegó rápido y bien embalada. Totalmente recomendable.',
-    helpful_count: 31,
-    verified_purchase: true,
-    created_at: new Date('2024-11-05')
-  },
-  {
-    id: 6,
-    customer_name: 'Miguel Fernández',
-    rating: 5,
-    title: 'Cumple perfectamente con la normativa',
-    comment: 'Baliza homologada por IDIADA como requiere la DGT. La he probado y funciona perfectamente. Es compacta, cabe en la guantera sin problema. Imprescindible desde 2026.',
-    helpful_count: 26,
-    verified_purchase: true,
-    created_at: new Date('2024-11-03')
-  },
-  {
     id: 7,
-    customer_name: 'Carmen Ruiz',
+    customer_name: 'Carmen R.',
     rating: 5,
-    title: 'Excelente relación calidad-precio',
-    comment: 'Después de comparar varias opciones, esta es la mejor. Buena calidad de construcción, batería de larga duración y precio competitivo. La recomiendo sin dudarlo.',
-    helpful_count: 24,
+    title: 'Muy buena calidad',
+    comment: 'Después de mirar varias opciones me decidí por esta por las buenas opiniones y no me arrepiento. La construcción es sólida, no parece de plástico barato. La luz es muy brillante y el imán es potente. Totalmente recomendable.',
+    helpful_count: 145,
     verified_purchase: true,
-    created_at: new Date('2024-11-01')
+    created_at: new Date('2024-11-06')
   },
   {
     id: 8,
-    customer_name: 'Pedro García',
+    customer_name: 'Pedro G.',
     rating: 5,
-    title: 'Muy buena visibilidad',
-    comment: 'La luz se ve a mucha distancia, es muy brillante. El sistema magnético funciona genial, se queda bien fijada al techo del coche. Muy satisfecho con la compra.',
-    helpful_count: 22,
+    title: 'Se ve desde muy lejos',
+    comment: 'La probé en la carretera con mi mujer y desde 200 metros se veía perfectamente. La luz parpadea y es muy llamativa. El sistema de imán es genial, se queda súper fija. Una compra muy acertada.',
+    helpful_count: 112,
     verified_purchase: true,
-    created_at: new Date('2024-10-28')
+    created_at: new Date('2024-11-04')
   },
   {
     id: 9,
-    customer_name: 'Isabel Torres',
+    customer_name: 'Isabel T.',
     rating: 4,
-    title: 'Buen producto',
-    comment: 'Baliza de buena calidad. Fácil de activar y muy visible. Le doy 4 estrellas porque tardó un poco en llegar, pero el producto en sí es excelente.',
-    helpful_count: 19,
+    title: 'Buena baliza',
+    comment: 'La baliza está muy bien, funciona perfectamente y es muy visible. Le pongo 4 estrellas porque el envío tardó más de lo esperado, unos 5 días. Pero el producto en sí genial, cumple con lo prometido.',
+    helpful_count: 98,
+    verified_purchase: true,
+    created_at: new Date('2024-11-02')
+  },
+  {
+    id: 10,
+    customer_name: 'Antonio J.',
+    rating: 5,
+    title: 'Obligatoria y necesaria',
+    comment: 'La ley dice que desde 2026 es obligatorio llevarla, así que mejor adelantarse. Esta baliza V-16 está homologada y funciona de maravilla. Es robusta, la luz es muy potente y cabe en la guantera sin problema.',
+    helpful_count: 176,
+    verified_purchase: true,
+    created_at: new Date('2024-10-31')
+  },
+  {
+    id: 11,
+    customer_name: 'Lucía H.',
+    rating: 5,
+    title: 'Muy fácil de usar',
+    comment: 'Me encanta que sea tan sencilla. Simplemente la sacas y la colocas en el techo del coche, el imán hace el resto. No hay que darle a ningún botón ni nada, se activa sola. Perfecta para emergencias.',
+    helpful_count: 134,
+    verified_purchase: true,
+    created_at: new Date('2024-10-29')
+  },
+  {
+    id: 12,
+    customer_name: 'Fernando P.',
+    rating: 5,
+    title: 'Certificada y homologada',
+    comment: 'Lo más importante es que tiene el certificado IDIADA que es lo que pide la DGT. La he comprobado y todo está en regla. La luz es visible incluso con sol directo. Muy buena inversión en seguridad.',
+    helpful_count: 142,
+    verified_purchase: true,
+    created_at: new Date('2024-10-27')
+  },
+  {
+    id: 13,
+    customer_name: 'Rosa M.',
+    rating: 5,
+    title: 'Excelente producto',
+    comment: 'Compré dos, una para mi coche y otra para el de mi marido. Las dos funcionan perfectas. La batería dura muchísimo y el diseño es muy compacto. Buena calidad de materiales. Muy recomendable.',
+    helpful_count: 159,
     verified_purchase: true,
     created_at: new Date('2024-10-25')
   },
   {
-    id: 10,
-    customer_name: 'Antonio Jiménez',
-    rating: 5,
-    title: 'Indispensable en el coche',
-    comment: 'Con la nueva ley es obligatorio llevarla. Esta baliza V-16 cumple todos los requisitos. Es robusta, funcional y muy visible. Una compra necesaria y acertada.',
-    helpful_count: 29,
+    id: 14,
+    customer_name: 'Diego S.',
+    rating: 4,
+    title: 'Buen producto, precio ajustado',
+    comment: 'La baliza funciona muy bien, es visible y cumple la normativa. El precio está en línea con otras similares del mercado. Le doy 4 estrellas porque esperaba que fuera un poco más barata, pero bueno, es un producto de seguridad.',
+    helpful_count: 87,
     verified_purchase: true,
-    created_at: new Date('2024-10-22')
+    created_at: new Date('2024-10-23')
+  },
+  {
+    id: 15,
+    customer_name: 'Elena V.',
+    rating: 5,
+    title: 'Muy potente y visible',
+    comment: 'La luz naranja es super brillante. La he probado de noche y de día y en ambas situaciones se ve perfectamente. El imán es muy fuerte, no se mueve nada. Estoy muy satisfecha con la compra.',
+    helpful_count: 151,
+    verified_purchase: true,
+    created_at: new Date('2024-10-21')
+  },
+  {
+    id: 16,
+    customer_name: 'Ricardo N.',
+    rating: 5,
+    title: 'Cumple perfectamente',
+    comment: 'Baliza V-16 homologada como debe ser. La he usado una vez en una emergencia real y funcionó perfecta. Se veía desde muy lejos y llamaba mucho la atención. Una compra imprescindible para el coche.',
+    helpful_count: 163,
+    verified_purchase: true,
+    created_at: new Date('2024-10-19')
+  },
+  {
+    id: 17,
+    customer_name: 'Beatriz L.',
+    rating: 5,
+    title: 'Muy contenta con la compra',
+    comment: 'Me gusta que sea pequeña y manejable. Cabe perfectamente en la guantera y no ocupa mucho espacio. La luz funciona genial, muy visible. El envío llegó rápido y bien protegido. 100% recomendable.',
+    helpful_count: 139,
+    verified_purchase: true,
+    created_at: new Date('2024-10-17')
+  },
+  {
+    id: 18,
+    customer_name: 'Alberto C.',
+    rating: 5,
+    title: 'Imprescindible en el coche',
+    comment: 'Con la nueva normativa es obligatorio llevarla. He elegido esta porque tiene muy buenas opiniones y cumple con todo lo que exige la DGT. El imán es muy potente y la luz se ve a kilómetros.',
+    helpful_count: 147,
+    verified_purchase: true,
+    created_at: new Date('2024-10-15')
+  },
+  {
+    id: 19,
+    customer_name: 'Cristina F.',
+    rating: 4,
+    title: 'Buena relación calidad-precio',
+    comment: 'Está bien por el precio que tiene. Funciona correctamente y cumple la normativa. La he probado y se ve bien. Le doy 4 estrellas porque he visto otras más baratas, aunque no sé si estarán homologadas.',
+    helpful_count: 95,
+    verified_purchase: true,
+    created_at: new Date('2024-10-13')
+  },
+  {
+    id: 20,
+    customer_name: 'Manuel D.',
+    rating: 5,
+    title: 'Súper recomendable',
+    comment: 'Una de las mejores compras que he hecho para el coche. La luz es potentísima, el imán sujeta genial y tiene todos los certificados necesarios. Además el tamaño es perfecto. No dudaría en comprarla de nuevo.',
+    helpful_count: 184,
+    verified_purchase: true,
+    created_at: new Date('2024-10-11')
   }
 ];
 
@@ -219,19 +319,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  const formContainer = document.querySelector('.star-button').closest('div');
+  const formContainer = document.querySelector('.star-button');
   if (formContainer) {
-    formContainer.addEventListener('mouseleave', function() {
-      starButtons.forEach((btn, index) => {
-        if (index < currentRating) {
-          btn.classList.remove('text-gray-300');
-          btn.classList.add('text-yellow-400');
-        } else {
-          btn.classList.remove('text-yellow-400');
-          btn.classList.add('text-gray-300');
-        }
+    const parentDiv = formContainer.closest('div');
+    if (parentDiv) {
+      parentDiv.addEventListener('mouseleave', function() {
+        starButtons.forEach((btn, index) => {
+          if (index < currentRating) {
+            btn.classList.remove('text-gray-300');
+            btn.classList.add('text-yellow-400');
+          } else {
+            btn.classList.remove('text-yellow-400');
+            btn.classList.add('text-gray-300');
+          }
+        });
       });
-    });
+    }
   }
 
   const form = document.getElementById('submit-review-form');
