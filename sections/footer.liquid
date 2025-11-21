@@ -59,6 +59,11 @@
       <div>
         <h3 class="text-white font-semibold mb-4">Legal</h3>
         <ul class="space-y-2 text-sm">
+          <li>
+            <a href="/pages/reviews" class="hover:text-white transition-colors">
+              Valoraciones
+            </a>
+          </li>
           {% for link in linklists[section.settings.legal_menu].links %}
             <li>
               <a href="{{ link.url }}" class="hover:text-white transition-colors">
