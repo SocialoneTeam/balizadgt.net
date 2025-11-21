@@ -1,0 +1,115 @@
+<section class="py-8 bg-yellow-50 border-y border-yellow-200">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="text-center">
+        <div class="flex justify-center mb-2">
+          <svg class="h-8 w-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+          </svg>
+        </div>
+        <p class="font-bold text-2xl text-gray-900">{{ section.settings.stat_1_value | default: "+2.500" }}</p>
+        <p class="text-sm text-gray-600">{{ section.settings.stat_1_label | default: "Clientes satisfechos" }}</p>
+      </div>
+      <div class="text-center">
+        <div class="flex justify-center mb-2">
+          <svg class="h-8 w-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+          </svg>
+        </div>
+        <p class="font-bold text-2xl text-gray-900">{{ section.settings.stat_2_value | default: "100%" }}</p>
+        <p class="text-sm text-gray-600">{{ section.settings.stat_2_label | default: "Homologada DGT" }}</p>
+      </div>
+      <div class="text-center">
+        <div class="flex justify-center mb-2">
+          <svg class="h-8 w-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"/>
+          </svg>
+        </div>
+        <p class="font-bold text-2xl text-gray-900">{{ section.settings.stat_3_value | default: "24-48h" }}</p>
+        <p class="text-sm text-gray-600">{{ section.settings.stat_3_label | default: "Envío rápido" }}</p>
+      </div>
+      <div class="text-center">
+        <div class="flex justify-center mb-2">
+          <svg class="h-8 w-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+          </svg>
+        </div>
+        <p class="font-bold text-2xl text-gray-900">{{ section.settings.stat_4_value | default: "2 años" }}</p>
+        <p class="text-sm text-gray-600">{{ section.settings.stat_4_label | default: "Garantía oficial" }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Stats",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Estadística 1"
+    },
+    {
+      "type": "text",
+      "id": "stat_1_value",
+      "label": "Valor",
+      "default": "+2.500"
+    },
+    {
+      "type": "text",
+      "id": "stat_1_label",
+      "label": "Etiqueta",
+      "default": "Clientes satisfechos"
+    },
+    {
+      "type": "header",
+      "content": "Estadística 2"
+    },
+    {
+      "type": "text",
+      "id": "stat_2_value",
+      "label": "Valor",
+      "default": "100%"
+    },
+    {
+      "type": "text",
+      "id": "stat_2_label",
+      "label": "Etiqueta",
+      "default": "Homologada DGT"
+    },
+    {
+      "type": "header",
+      "content": "Estadística 3"
+    },
+    {
+      "type": "text",
+      "id": "stat_3_value",
+      "label": "Valor",
+      "default": "24-48h"
+    },
+    {
+      "type": "text",
+      "id": "stat_3_label",
+      "label": "Etiqueta",
+      "default": "Envío rápido"
+    },
+    {
+      "type": "header",
+      "content": "Estadística 4"
+    },
+    {
+      "type": "text",
+      "id": "stat_4_value",
+      "label": "Valor",
+      "default": "2 años"
+    },
+    {
+      "type": "text",
+      "id": "stat_4_label",
+      "label": "Etiqueta",
+      "default": "Garantía oficial"
+    }
+  ]
+}
+{% endschema %}

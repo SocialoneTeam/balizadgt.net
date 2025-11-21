@@ -1,0 +1,12 @@
+{
+  "name": "baliza-dgt-shopify-theme",
+  "version": "1.0.0",
+  "description": "Shopify theme for Baliza V-16 DGT",
+  "scripts": {
+    "build": "echo 'Shopify theme - no build process required' && exit 0",
+    "validate": "echo 'Validating Shopify theme structure...' && exit 0"
+  },
+  "keywords": ["shopify", "theme", "baliza", "dgt"],
+  "author": "BalizaDGT",
+  "license": "UNLICENSED"
+}

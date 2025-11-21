@@ -1,0 +1,19 @@
+{
+  "sections": {
+    "page-header": {
+      "type": "page-header",
+      "settings": {
+        "title": "Política de Privacidad",
+        "description": "Protección de datos y privacidad"
+      }
+    },
+    "privacy-content": {
+      "type": "privacy-content",
+      "settings": {}
+    }
+  },
+  "order": [
+    "page-header",
+    "privacy-content"
+  ]
+}

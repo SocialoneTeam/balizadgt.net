@@ -1,0 +1,19 @@
+{
+  "sections": {
+    "page-header": {
+      "type": "page-header",
+      "settings": {
+        "title": "Normativa DGT",
+        "description": "Todo sobre el Real Decreto 1030/2022 y la obligatoriedad de la Baliza V-16"
+      }
+    },
+    "normativa-content": {
+      "type": "normativa-content",
+      "settings": {}
+    }
+  },
+  "order": [
+    "page-header",
+    "normativa-content"
+  ]
+}

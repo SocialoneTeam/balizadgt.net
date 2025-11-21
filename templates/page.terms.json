@@ -1,0 +1,19 @@
+{
+  "sections": {
+    "page-header": {
+      "type": "page-header",
+      "settings": {
+        "title": "Términos y Condiciones",
+        "description": "Condiciones de uso y venta"
+      }
+    },
+    "terms-content": {
+      "type": "terms-content",
+      "settings": {}
+    }
+  },
+  "order": [
+    "page-header",
+    "terms-content"
+  ]
+}

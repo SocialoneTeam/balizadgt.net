@@ -1,0 +1,13 @@
+<!-- Este archivo SVG se puede convertir a ICO usando herramientas online o incluirse directamente -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <rect width="32" height="32" rx="6" fill="url(#miniGradient)"/>
+  <path d="M16 8L22 24H10L16 8Z" fill="white"/>
+  <circle cx="16" cy="19.5" r="1" fill="#DC2626"/>
+  <line x1="16" y1="13" x2="16" y2="17.5" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="miniGradient" x1="0" y1="0" x2="32" y2="32">
+      <stop offset="0%" stop-color="#DC2626"/>
+      <stop offset="100%" stop-color="#EA580C"/>
+    </linearGradient>
+  </defs>
+</svg>

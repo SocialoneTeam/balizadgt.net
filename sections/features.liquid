@@ -1,0 +1,171 @@
+<section class="py-20 bg-white">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">
+        {{ section.settings.heading | default: "¿Por qué elegir la Baliza V-16?" }}
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        {{ section.settings.description | default: "La evolución en seguridad vial. Más rápida, más segura, más inteligente." }}
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {% if section.settings.feature_1_enabled %}
+      <div class="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl border border-gray-200 hover:shadow-xl transition-all transform hover:-translate-y-1">
+        <div class="bg-gradient-to-br from-red-600 to-orange-600 w-16 h-16 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+          <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">{{ section.settings.feature_1_title | default: "Geolocalización" }}</h3>
+        <p class="text-gray-600 leading-relaxed">{{ section.settings.feature_1_description | default: "Envía automáticamente tu posición a la DGT y servicios de emergencia" }}</p>
+      </div>
+      {% endif %}
+
+      {% if section.settings.feature_2_enabled %}
+      <div class="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl border border-gray-200 hover:shadow-xl transition-all transform hover:-translate-y-1">
+        <div class="bg-gradient-to-br from-red-600 to-orange-600 w-16 h-16 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+          <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">{{ section.settings.feature_2_title | default: "Máxima Seguridad" }}</h3>
+        <p class="text-gray-600 leading-relaxed">{{ section.settings.feature_2_description | default: "No necesitas salir del vehículo para señalizar, evitando riesgos" }}</p>
+      </div>
+      {% endif %}
+
+      {% if section.settings.feature_3_enabled %}
+      <div class="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl border border-gray-200 hover:shadow-xl transition-all transform hover:-translate-y-1">
+        <div class="bg-gradient-to-br from-red-600 to-orange-600 w-16 h-16 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+          <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">{{ section.settings.feature_3_title | default: "Larga Duración" }}</h3>
+        <p class="text-gray-600 leading-relaxed">{{ section.settings.feature_3_description | default: "Batería recargable con 4 horas de autonomía continua" }}</p>
+      </div>
+      {% endif %}
+
+      {% if section.settings.feature_4_enabled %}
+      <div class="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl border border-gray-200 hover:shadow-xl transition-all transform hover:-translate-y-1">
+        <div class="bg-gradient-to-br from-red-600 to-orange-600 w-16 h-16 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+          <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">{{ section.settings.feature_4_title | default: "Activación Rápida" }}</h3>
+        <p class="text-gray-600 leading-relaxed">{{ section.settings.feature_4_description | default: "Luz visible a 1km de distancia, activación instantánea" }}</p>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Features",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Título principal",
+      "default": "¿Por qué elegir la Baliza V-16?"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Descripción",
+      "default": "La evolución en seguridad vial. Más rápida, más segura, más inteligente."
+    },
+    {
+      "type": "header",
+      "content": "Característica 1"
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_1_enabled",
+      "label": "Mostrar característica 1",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "feature_1_title",
+      "label": "Título",
+      "default": "Geolocalización"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_1_description",
+      "label": "Descripción",
+      "default": "Envía automáticamente tu posición a la DGT y servicios de emergencia"
+    },
+    {
+      "type": "header",
+      "content": "Característica 2"
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_2_enabled",
+      "label": "Mostrar característica 2",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "feature_2_title",
+      "label": "Título",
+      "default": "Máxima Seguridad"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_2_description",
+      "label": "Descripción",
+      "default": "No necesitas salir del vehículo para señalizar, evitando riesgos"
+    },
+    {
+      "type": "header",
+      "content": "Característica 3"
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_3_enabled",
+      "label": "Mostrar característica 3",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "feature_3_title",
+      "label": "Título",
+      "default": "Larga Duración"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_3_description",
+      "label": "Descripción",
+      "default": "Batería recargable con 4 horas de autonomía continua"
+    },
+    {
+      "type": "header",
+      "content": "Característica 4"
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_4_enabled",
+      "label": "Mostrar característica 4",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "feature_4_title",
+      "label": "Título",
+      "default": "Activación Rápida"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_4_description",
+      "label": "Descripción",
+      "default": "Luz visible a 1km de distancia, activación instantánea"
+    }
+  ]
+}
+{% endschema %}

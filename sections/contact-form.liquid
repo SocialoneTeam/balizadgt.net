@@ -1,0 +1,182 @@
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+  <div class="grid lg:grid-cols-3 gap-8">
+    <div class="lg:col-span-2">
+      <div class="bg-white rounded-2xl shadow-md p-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Envíanos un mensaje</h2>
+
+        {% form 'contact' %}
+          {% if form.posted_successfully? %}
+            <div class="bg-green-50 border border-green-200 rounded-xl p-4 mb-6 flex items-center gap-3">
+              <svg class="h-6 w-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <p class="text-green-800 font-semibold">
+                ¡Mensaje enviado! Te responderemos pronto.
+              </p>
+            </div>
+          {% endif %}
+
+          {% if form.errors %}
+            <div class="bg-red-50 border border-red-200 rounded-xl p-4 mb-6">
+              <p class="text-red-800 font-semibold mb-2">Por favor corrige los siguientes errores:</p>
+              <ul class="list-disc list-inside text-red-700 text-sm">
+                {% for field in form.errors %}
+                  <li>{{ field | capitalize }} {{ form.errors.messages[field] }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+
+          <div class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label for="contact-name" class="block text-sm font-semibold text-gray-700 mb-2">
+                  Nombre *
+                </label>
+                <input
+                  type="text"
+                  id="contact-name"
+                  name="contact[name]"
+                  required
+                  class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-red-600 focus:ring-2 focus:ring-red-600 focus:ring-opacity-20 transition-all outline-none"
+                  placeholder="Tu nombre completo"
+                >
+              </div>
+
+              <div>
+                <label for="contact-email" class="block text-sm font-semibold text-gray-700 mb-2">
+                  Email *
+                </label>
+                <input
+                  type="email"
+                  id="contact-email"
+                  name="contact[email]"
+                  required
+                  class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-red-600 focus:ring-2 focus:ring-red-600 focus:ring-opacity-20 transition-all outline-none"
+                  placeholder="tu@email.com"
+                >
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label for="contact-phone" class="block text-sm font-semibold text-gray-700 mb-2">
+                  Teléfono
+                </label>
+                <input
+                  type="tel"
+                  id="contact-phone"
+                  name="contact[phone]"
+                  class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-red-600 focus:ring-2 focus:ring-red-600 focus:ring-opacity-20 transition-all outline-none"
+                  placeholder="+34 600 000 000"
+                >
+              </div>
+
+              <div>
+                <label for="contact-subject" class="block text-sm font-semibold text-gray-700 mb-2">
+                  Asunto *
+                </label>
+                <select
+                  id="contact-subject"
+                  name="contact[subject]"
+                  required
+                  class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-red-600 focus:ring-2 focus:ring-red-600 focus:ring-opacity-20 transition-all outline-none"
+                >
+                  <option value="">Selecciona un asunto</option>
+                  <option value="Información del producto">Información del producto</option>
+                  <option value="Estado de pedido">Estado de pedido</option>
+                  <option value="Soporte técnico">Soporte técnico</option>
+                  <option value="Homologación DGT">Homologación DGT</option>
+                  <option value="Devoluciones">Devoluciones</option>
+                  <option value="Otro">Otro</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="contact-message" class="block text-sm font-semibold text-gray-700 mb-2">
+                Mensaje *
+              </label>
+              <textarea
+                id="contact-message"
+                name="contact[body]"
+                required
+                rows="6"
+                class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-red-600 focus:ring-2 focus:ring-red-600 focus:ring-opacity-20 transition-all outline-none resize-none"
+                placeholder="Cuéntanos en qué podemos ayudarte..."
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full bg-gradient-to-r from-red-600 to-orange-600 text-white py-4 rounded-xl font-semibold text-lg hover:shadow-xl transition-all transform hover:scale-105 flex items-center justify-center gap-2"
+            >
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+              Enviar Mensaje
+            </button>
+          </div>
+        {% endform %}
+      </div>
+    </div>
+
+    <div class="space-y-6">
+      <div class="bg-white rounded-2xl shadow-md p-8">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6">Información de Contacto</h3>
+
+        <div class="space-y-6">
+          
+
+          <div class="flex items-start gap-4">
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="bg-red-100 p-3 rounded-xl">
+              <svg class="h-6 w-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900 mb-1">Dirección</p>
+              <p class="text-gray-600">España</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="bg-red-100 p-3 rounded-xl">
+              <svg class="h-6 w-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900 mb-1">Horario</p>
+              <p class="text-gray-600">
+                Lunes a Viernes<br />
+                9:00 - 18:00
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-br from-red-600 to-orange-600 text-white rounded-2xl shadow-md p-8">
+        <h3 class="text-2xl font-bold mb-4">Preguntas Frecuentes</h3>
+        <p class="text-red-50 mb-6">
+          Encuentra respuestas rápidas a las preguntas más comunes sobre la baliza V-16
+        </p>
+        <a href="https://balizadgt.net/" class="inline-block bg-white text-red-600 px-6 py-3 rounded-xl font-semibold hover:bg-gray-50 transition-colors">
+          Ver Producto
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Contact Form",
+  "settings": []
+}
+{% endschema %}

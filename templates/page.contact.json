@@ -1,0 +1,19 @@
+{
+  "sections": {
+    "page-header": {
+      "type": "page-header",
+      "settings": {
+        "title": "Contacto",
+        "description": "¿Tienes alguna duda sobre la baliza V-16? Estamos aquí para ayudarte"
+      }
+    },
+    "contact-form": {
+      "type": "contact-form",
+      "settings": {}
+    }
+  },
+  "order": [
+    "page-header",
+    "contact-form"
+  ]
+}

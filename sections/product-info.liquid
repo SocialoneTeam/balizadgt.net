@@ -1,0 +1,210 @@
+{% assign current_variant = product.selected_or_first_available_variant %}
+
+<div class="min-h-screen bg-white">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+    <a href="/" class="text-gray-600 hover:text-red-600 mb-8 flex items-center gap-2 transition-colors inline-flex">
+      ← Volver al inicio
+    </a>
+
+    <div class="grid md:grid-cols-2 gap-12 mb-16">
+      <div class="space-y-4">
+        <div class="aspect-square rounded-2xl overflow-hidden bg-gray-100 shadow-xl">
+          {% if product.featured_image %}
+            <img src="{{ product.featured_image | img_url: '800x800' }}" alt="{{ product.title }}" class="w-full h-full object-cover" id="main-product-image">
+          {% else %}
+            <img src="https://images.pexels.com/photos/1545743/pexels-photo-1545743.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Baliza V-16 DGT" class="w-full h-full object-cover" id="main-product-image">
+          {% endif %}
+        </div>
+        <div class="grid grid-cols-3 gap-4">
+          {% if product.images.size > 0 %}
+            {% for image in product.images limit: 5 %}
+              <button onclick="changeImage('{{ image | img_url: '800x800' }}')" class="aspect-square rounded-xl overflow-hidden border-2 border-gray-200 hover:border-red-600 transition-all">
+                <img src="{{ image | img_url: '200x200' }}" alt="{{ product.title }}" class="w-full h-full object-cover">
+              </button>
+            {% endfor %}
+          {% else %}
+            <button onclick="changeImage('https://images.pexels.com/photos/1545743/pexels-photo-1545743.jpeg?auto=compress&cs=tinysrgb&w=800')" class="aspect-square rounded-xl overflow-hidden border-2 border-red-600 hover:border-red-700 transition-all">
+              <img src="https://images.pexels.com/photos/1545743/pexels-photo-1545743.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Baliza V-16" class="w-full h-full object-cover">
+            </button>
+            <button onclick="changeImage('https://images.pexels.com/photos/707046/pexels-photo-707046.jpeg?auto=compress&cs=tinysrgb&w=800')" class="aspect-square rounded-xl overflow-hidden border-2 border-gray-200 hover:border-red-600 transition-all">
+              <img src="https://images.pexels.com/photos/707046/pexels-photo-707046.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Uso en emergencia" class="w-full h-full object-cover">
+            </button>
+            <button onclick="changeImage('https://images.pexels.com/photos/13065690/pexels-photo-13065690.jpeg?auto=compress&cs=tinysrgb&w=800')" class="aspect-square rounded-xl overflow-hidden border-2 border-gray-200 hover:border-red-600 transition-all">
+              <img src="https://images.pexels.com/photos/13065690/pexels-photo-13065690.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Seguridad vial" class="w-full h-full object-cover">
+            </button>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="space-y-6">
+        <div>
+          <div class="inline-flex items-center gap-2 bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-semibold mb-4">
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+            </svg>
+            Certificado IDIADA PC25060265
+          </div>
+          <h1 class="text-4xl font-bold text-gray-900 mb-4">{{ product.title }}</h1>
+          <div class="flex items-center gap-4 mb-4">
+            <div class="flex items-center gap-1">
+              {% for i in (1..5) %}
+                <svg class="h-5 w-5 fill-yellow-400 text-yellow-400" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                </svg>
+              {% endfor %}
+            </div>
+            <span class="text-gray-600">(547 valoraciones)</span>
+          </div>
+          <p class="text-gray-600 text-lg leading-relaxed">{{ product.description }}</p>
+        </div>
+
+        <div class="bg-gradient-to-br from-red-50 to-orange-50 p-6 rounded-2xl border border-red-200">
+          <div class="flex items-center gap-2 text-red-700 mb-2">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <span class="font-semibold">Obligatorio desde 1 Enero 2026</span>
+          </div>
+          <p class="text-gray-700 text-sm">Cumple con el Real Decreto 1030/2022. Todos los vehículos deben llevar baliza V-16.</p>
+        </div>
+
+        <div class="border-t border-b border-gray-200 py-6">
+          <div class="flex items-baseline gap-4 mb-6">
+            <span class="text-5xl font-bold text-gray-900">{{ current_variant.price | money }}</span>
+            <span class="text-gray-500">IVA incluido</span>
+          </div>
+
+          {% form 'product', product, id: 'product-form' %}
+            <input type="hidden" name="id" value="{{ current_variant.id }}">
+            <div class="flex items-center gap-4 mb-6">
+              <label class="text-gray-700 font-medium">Cantidad:</label>
+              <div class="flex items-center gap-3">
+                <button type="button" onclick="decrementQuantity()" class="w-10 h-10 rounded-lg border border-gray-300 hover:border-red-600 hover:text-red-600 transition-colors font-semibold">
+                  -
+                </button>
+                <input type="number" name="quantity" value="1" min="1" max="10" id="quantity" class="w-12 text-center font-semibold text-lg border-0 outline-none">
+                <button type="button" onclick="incrementQuantity()" class="w-10 h-10 rounded-lg border border-gray-300 hover:border-red-600 hover:text-red-600 transition-colors font-semibold">
+                  +
+                </button>
+              </div>
+            </div>
+
+            <button type="submit" name="add" id="add-to-cart-btn" class="w-full bg-gradient-to-r from-red-600 to-orange-600 text-white py-4 rounded-xl font-semibold text-lg hover:shadow-xl transition-all transform hover:scale-105 mb-4">
+              Añadir al Carrito - <span id="total-price">{{ current_variant.price | money }}</span>
+            </button>
+          {% endform %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function changeImage(url) {
+    document.getElementById('main-product-image').src = url;
+  }
+
+  function incrementQuantity() {
+    const input = document.getElementById('quantity');
+    if (input.value < 10) {
+      input.value = parseInt(input.value) + 1;
+      updateTotalPrice();
+    }
+  }
+
+  function decrementQuantity() {
+    const input = document.getElementById('quantity');
+    if (input.value > 1) {
+      input.value = parseInt(input.value) - 1;
+      updateTotalPrice();
+    }
+  }
+
+  function updateTotalPrice() {
+    const quantity = parseInt(document.getElementById('quantity').value);
+    const price = {{ current_variant.price | divided_by: 100.0 }};
+    const total = (price * quantity).toFixed(2);
+    document.getElementById('total-price').textContent = total + '€';
+  }
+
+  // Handle add to cart form submission
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('product-form');
+    const addButton = document.getElementById('add-to-cart-btn');
+
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        const variantId = parseInt(formData.get('id'));
+        const quantity = parseInt(formData.get('quantity'));
+
+        // Disable button to prevent double submission
+        addButton.disabled = true;
+        addButton.textContent = 'Añadiendo...';
+
+        fetch('/cart/add.js', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            items: [{
+              id: variantId,
+              quantity: quantity
+            }]
+          })
+        })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(data => {
+          // Update cart count
+          const cartCount = document.querySelectorAll('.cart-count');
+          if (cartCount.length > 0) {
+            fetch('/cart.js')
+              .then(response => response.json())
+              .then(cart => {
+                cartCount.forEach(el => {
+                  el.textContent = cart.item_count;
+                });
+              });
+          }
+
+          // Show notification
+          document.dispatchEvent(new CustomEvent('cart:item-added'));
+
+          // Re-enable button
+          addButton.disabled = false;
+          const currentQuantity = parseInt(document.getElementById('quantity').value);
+          const price = {{ current_variant.price | divided_by: 100.0 }};
+          const total = (price * currentQuantity).toFixed(2);
+          addButton.innerHTML = 'Añadir al Carrito - <span id="total-price">' + total + '€</span>';
+        })
+        .catch(error => {
+          console.error('Error adding to cart:', error);
+          alert('Error al añadir el producto al carrito. Por favor, inténtalo de nuevo.');
+
+          // Re-enable button
+          addButton.disabled = false;
+          const currentQuantity = parseInt(document.getElementById('quantity').value);
+          const price = {{ current_variant.price | divided_by: 100.0 }};
+          const total = (price * currentQuantity).toFixed(2);
+          addButton.innerHTML = 'Añadir al Carrito - <span id="total-price">' + total + '€</span>';
+        });
+      });
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Product Info",
+  "settings": []
+}
+{% endschema %}

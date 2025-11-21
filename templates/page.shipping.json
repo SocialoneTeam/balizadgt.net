@@ -1,0 +1,19 @@
+{
+  "sections": {
+    "page-header": {
+      "type": "page-header",
+      "settings": {
+        "title": "Envíos y Devoluciones",
+        "description": "Información sobre plazos de entrega y política de devoluciones"
+      }
+    },
+    "shipping-content": {
+      "type": "shipping-content",
+      "settings": {}
+    }
+  },
+  "order": [
+    "page-header",
+    "shipping-content"
+  ]
+}

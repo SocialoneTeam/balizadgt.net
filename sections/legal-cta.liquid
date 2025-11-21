@@ -1,0 +1,109 @@
+<section class="py-20 bg-gradient-to-br from-red-50 to-orange-50">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+      <div class="grid md:grid-cols-2 gap-0">
+        <div class="p-12 lg:p-16">
+          <div class="inline-flex items-center gap-2 bg-red-100 text-red-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            Normativa DGT
+          </div>
+
+          <h2 class="text-4xl font-bold text-gray-900 mb-6">
+            {{ section.settings.heading | default: "Obligatorio desde" | newline_to_br }}
+          </h2>
+
+          <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+            {{ section.settings.description | default: "Según el Real Decreto 1030/2022, todos los vehículos deberán llevar una baliza V-16 homologada. Los triángulos de emergencia quedarán obsoletos." }}
+          </p>
+
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-start gap-3">
+              <svg class="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <span class="text-gray-700">Cumple con RD 1030/2022</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <span class="text-gray-700">Certificación IDIADA PC25060265</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <span class="text-gray-700">Homologada por la DGT</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <span class="text-gray-700">Garantía de 2 años</span>
+            </li>
+          </ul>
+
+          <a href="{{ section.settings.button_link | default: '/collections/all' }}" class="inline-block bg-gradient-to-r from-red-600 to-orange-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-xl transition-all transform hover:scale-105">
+            {{ section.settings.button_text | default: "Comprar Ahora" }}
+          </a>
+        </div>
+
+        <div class="relative h-full min-h-[400px] bg-gray-200 flex items-center justify-center overflow-hidden">
+  {% if section.settings.image %}
+    <img 
+      src="{{ section.settings.image | img_url: '800x800' }}" 
+      alt="{{ section.settings.heading }}" 
+      class="max-w-full max-h-full object-contain"
+    >
+  {% else %}
+    <img 
+      src="https://images.pexels.com/photos/13065690/pexels-photo-13065690.jpeg?auto=compress&cs=tinysrgb&w=800" 
+      alt="Seguridad vial" 
+      class="max-w-full max-h-full object-contain"
+    >
+  {% endif %}
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Legal CTA",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Título",
+      "default": "Obligatorio desde 1 de Enero 2026"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Descripción",
+      "default": "Según el Real Decreto 1030/2022, todos los vehículos deberán llevar una baliza V-16 homologada. Los triángulos de emergencia quedarán obsoletos."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Texto del botón",
+      "default": "Comprar Ahora"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Enlace del botón",
+      "default": "/collections/all"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Imagen"
+    }
+  ]
+}
+{% endschema %}

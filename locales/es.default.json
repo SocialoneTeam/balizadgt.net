@@ -1,0 +1,72 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "general": {
+    "accessibility": {
+      "skip_to_content": "Ir al contenido"
+    },
+    "meta": {
+      "tags": "Etiquetado \"{{ tags }}\"",
+      "page": "Página {{ page }}"
+    },
+    "404": {
+      "title": "Página no encontrada",
+      "subtext": "La página que buscas no existe"
+    },
+    "breadcrumbs": {
+      "home": "Inicio"
+    }
+  },
+  "cart": {
+    "general": {
+      "title": "Carrito",
+      "remove": "Eliminar",
+      "note": "Notas del pedido",
+      "subtotal": "Subtotal",
+      "taxes_and_shipping": "Impuestos y envío calculados al finalizar la compra",
+      "update": "Actualizar",
+      "checkout": "Proceder al pago",
+      "empty": "Tu carrito está vacío",
+      "continue_shopping": "Seguir comprando",
+      "close_cart": "Cerrar carrito"
+    }
+  },
+  "products": {
+    "product": {
+      "sold_out": "Agotado",
+      "unavailable": "No disponible",
+      "quantity": "Cantidad",
+      "add_to_cart": "Añadir al carrito",
+      "price": "Precio",
+      "vendor": "Vendedor"
+    }
+  },
+  "customer": {
+    "account": {
+      "title": "Mi cuenta",
+      "details": "Detalles de la cuenta"
+    },
+    "login": {
+      "title": "Iniciar sesión",
+      "email": "Email",
+      "password": "Contraseña",
+      "forgot_password": "¿Olvidaste tu contraseña?",
+      "sign_in": "Entrar"
+    },
+    "orders": {
+      "title": "Historial de pedidos",
+      "order_number": "Pedido",
+      "date": "Fecha",
+      "payment_status": "Estado del pago",
+      "fulfillment_status": "Estado del envío",
+      "total": "Total"
+    }
+  }
+}

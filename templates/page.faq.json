@@ -1,0 +1,19 @@
+{
+  "sections": {
+    "page-header": {
+      "type": "page-header",
+      "settings": {
+        "title": "Preguntas Frecuentes",
+        "description": "Encuentra respuestas a las dudas más comunes sobre la Baliza V-16"
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "settings": {}
+    }
+  },
+  "order": [
+    "page-header",
+    "faq"
+  ]
+}

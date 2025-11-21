@@ -1,0 +1,127 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "heading": "Baliza V-16",
+        "subheading": "Homologada DGT",
+        "description": "Baliza de emergencia conectada y con geolocalización. Homologada por la DGT con certificación V16.",
+        "image": "shopify://shop_images/baliza-V-16-use.jpg",
+        "primary_button_text": "Comprar Ahora",
+        "primary_button_link": "shopify://products/baliza-senalizadora-v16-homologada-dgt",
+        "secondary_button_text": "¡Envío Gratis!",
+        "secondary_button_link": "shopify://products/baliza-senalizadora-v16-homologada-dgt"
+      }
+    },
+    "stats": {
+      "type": "stats",
+      "settings": {
+        "stat_1_value": "+2.500",
+        "stat_1_label": "Clientes satisfechos",
+        "stat_2_value": "100%",
+        "stat_2_label": "Homologada DGT",
+        "stat_3_value": "24-48h",
+        "stat_3_label": "Envío rápido",
+        "stat_4_value": "2 años",
+        "stat_4_label": "Garantía oficial"
+      }
+    },
+    "urgency": {
+      "type": "urgency-banner",
+      "settings": {
+        "show_banner": true,
+        "urgency_text": "Quedan solo",
+        "time_remaining": "2 meses",
+        "urgency_suffix": "para que sea obligatoria",
+        "call_to_action": "No te quedes sin tu baliza V-16"
+      }
+    },
+    "features": {
+      "type": "features",
+      "settings": {
+        "heading": "¿Por qué elegir la Baliza V-16?",
+        "description": "Homologada. Geolocalizada. Máxima luz.",
+        "feature_1_enabled": true,
+        "feature_1_title": "Geolocalización",
+        "feature_1_description": "Envía automáticamente tu posición a la DGT y servicios de emergencia",
+        "feature_2_enabled": true,
+        "feature_2_title": "Máxima Seguridad",
+        "feature_2_description": "No necesitas salir del vehículo para señalizar, evitando riesgos",
+        "feature_3_enabled": true,
+        "feature_3_title": "Larga Duración",
+        "feature_3_description": "Batería recargable con 4 horas de autonomía continua",
+        "feature_4_enabled": true,
+        "feature_4_title": "Activación Rápida",
+        "feature_4_description": "Luz visible a 1km de distancia, activación instantánea"
+      }
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "settings": {}
+    },
+    "legal-cta": {
+      "type": "legal-cta",
+      "settings": {
+        "heading": "Obligatorio desde 1 de Enero 2026",
+        "description": "Según el Real Decreto 1030/2022, todos los vehículos deberán llevar una baliza V-16 homologada. Los triángulos de emergencia quedarán obsoletos.",
+        "button_text": "Comprar Ahora",
+        "button_link": "shopify://products/baliza-v16-homologada-dgt-1",
+        "image": "shopify://shop_images/Captura_de_pantalla_2025-11-21_094611.png"
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "settings": {}
+    },
+    "regulations-promo": {
+      "type": "regulations-promo",
+      "settings": {}
+    },
+    "17599918265d4bba04": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_4dxEEx": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "691786",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 24,
+            "padding_bottom": 24,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_4dxEEx"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "hero",
+    "stats",
+    "urgency",
+    "features",
+    "testimonials",
+    "legal-cta",
+    "faq",
+    "regulations-promo",
+    "17599918265d4bba04"
+  ]
+}

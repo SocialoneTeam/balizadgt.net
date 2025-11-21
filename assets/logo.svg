@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
+  <!-- Background badge -->
+  <rect x="5" y="5" width="50" height="50" rx="12" fill="url(#gradient1)"/>
+
+  <!-- Warning triangle icon -->
+  <path d="M30 16L42 38H18L30 16Z" fill="white" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="30" cy="31" r="1.5" fill="#DC2626"/>
+  <line x1="30" y1="23" x2="30" y2="28" stroke="#DC2626" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- GPS signal waves -->
+  <path d="M35 19C37 21 37 23 35 25" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+  <path d="M38 17C41 20 41 24 38 27" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.4"/>
+
+  <!-- Text -->
+  <text x="65" y="28" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1F2937">
+    BALIZA
+  </text>
+  <text x="65" y="45" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#DC2626">
+    V-16 DGT
+  </text>
+
+  <!-- Checkmark badge -->
+  <circle cx="185" cy="15" r="12" fill="#10B981"/>
+  <path d="M181 15L183.5 17.5L189 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="gradient1" x1="5" y1="5" x2="55" y2="55" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#DC2626"/>
+      <stop offset="100%" stop-color="#EA580C"/>
+    </linearGradient>
+  </defs>
+</svg>
