@@ -4,9 +4,9 @@
       <div class="flex items-center gap-3">
         <a href="/" class="flex items-center">
           {% if section.settings.logo %}
-            <img src="{{ section.settings.logo | img_url: '140x' }}" alt="{{ shop.name }}" class="h-auto w-auto"> 
+            <img src="{{ section.settings.logo | img_url: '140x' }}" alt="{{ shop.name }}" class="h-10 w-auto md:h-12">
           {% else %}
-            <img src="{{ 'logo.svg' | asset_url }}" alt="Baliza DGT" class="h-12 w-auto">
+            <img src="{{ 'logo.svg' | asset_url }}" alt="Baliza DGT" class="h-10 w-auto md:h-12">
           {% endif %}
         </a>
       </div>

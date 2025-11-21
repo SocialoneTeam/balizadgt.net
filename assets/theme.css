@@ -446,12 +446,14 @@ button[disabled]:hover {
 .last\:border-0:last-child { border-width: 0; }
 
 /* Mobile Menu */
-.mobile-menu {
-  display: none;
-}
+@media (max-width: 767px) {
+  .mobile-menu {
+    display: none;
+  }
 
-.mobile-menu.active {
-  display: block;
+  .mobile-menu:not(.hidden) {
+    display: block;
+  }
 }
 
 /* Utilities */
