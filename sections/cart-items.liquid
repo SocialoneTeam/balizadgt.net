@@ -16,7 +16,9 @@
 
                 <div class="flex-1">
                   <h3 class="text-xl font-bold text-gray-900 mb-2">{{ item.product.title }}</h3>
-                  <p class="text-gray-600 mb-4">{{ item.variant.title }}</p>
+                  {% unless item.variant.title == 'Default Title' %}
+                    <p class="text-gray-600 mb-4">{{ item.variant.title }}</p>
+                  {% endunless %}
 
                   <div class="flex items-center justify-between">
                     <div class="flex items-center gap-3">
@@ -53,13 +55,13 @@
               </div>
               <div class="flex justify-between text-gray-600">
                 <span>Envío</span>
-                <span>{% if cart.total_price >= 5000 %}Gratis{% else %}{{ 500 | money }}{% endif %}</span>
+                <span class="text-green-600 font-semibold">Gratis</span>
               </div>
             </div>
 
             <div class="flex justify-between text-xl font-bold text-gray-900 mb-6">
               <span>Total</span>
-              <span>{{ cart.total_price | plus: 500 | money }}</span>
+              <span>{{ cart.total_price | money }}</span>
             </div>
 
             <a href="/checkout" class="block w-full bg-gradient-to-r from-red-600 to-orange-600 text-white py-4 rounded-xl font-semibold text-lg text-center hover:shadow-xl transition-all transform hover:scale-105 mb-4">
