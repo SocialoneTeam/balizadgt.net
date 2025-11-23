@@ -230,12 +230,8 @@
           // Show notification
           document.dispatchEvent(new CustomEvent('cart:item-added'));
 
-          // Re-enable button
-          addButton.disabled = false;
-          const currentQuantity = parseInt(document.getElementById('quantity').value);
-          const price = {{ current_variant.price | divided_by: 100.0 }};
-          const total = (price * currentQuantity).toFixed(2);
-          addButton.innerHTML = 'Añadir al Carrito - <span id="total-price">' + total + '€</span>';
+          // Redirect to cart page
+          window.location.href = '/cart';
         })
         .catch(error => {
           console.error('Error adding to cart:', error);
